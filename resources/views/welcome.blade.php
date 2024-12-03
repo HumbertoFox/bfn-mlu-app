@@ -17,8 +17,7 @@
 
 <body class="font-sans antialiased dark:bg-black dark:text-white/50">
     <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-        <div
-            class="relative min-h-screen flex flex-col items-center selection:bg-[#F7931A] selection:text-white">
+        <div class="relative min-h-screen flex flex-col items-center selection:bg-[#F7931A] selection:text-white">
             <div class="relative w-full h-svh max-w-2xl px-6 flex flex-col justify-between lg:max-w-7xl">
                 <header class="flex text-center pt-2">
                     <div class="flex lg:justify-between lg:col-start-2">
@@ -47,7 +46,7 @@
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}"
                                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-                                        Cadastrar
+                                        Cadastrar-se
                                     </a>
                                 @endif
                             @endauth
@@ -56,7 +55,7 @@
                 </header>
 
                 <main>
-                    <canvas id="bitcoinChart" width="100%" height="500"></canvas>
+                    <canvas class="w-full h-[75vh]" id="bitcoinChart" width="100%" height="100%"></canvas>
                     <script>
                         fetch('https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1')
                             .then(response => response.json())
